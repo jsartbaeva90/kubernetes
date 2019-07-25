@@ -1,0 +1,2 @@
+what is Downward API?
+The Downward API allows containers to consume information about themselves or the cluster without using the Kubernetes client or API server. An example is an existing application that assumes a particular well-known environment variable holds a unique identifier
