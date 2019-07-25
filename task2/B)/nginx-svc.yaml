@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  labels:
+    nginx: nginx-svc
+  name: nginx-svc
+spec:
+   replicas: 1
+   selector: 
+    matchLabels: 
+      task: two
+   template:
+    metadata:      
+      labels:
+        task: two      
+    spec: 
+      containers: 
+      - name: nginx-svc
+        image: nginx 
+
+--- 
+apiVersion: v1
+kind: Service
+metadata: 
+  name: nginx-svc
+spec:
+  selector:
+    nginx: nginx-svc     
+  clusterIP: None 

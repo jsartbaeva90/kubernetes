@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata: 
+  name: ubuntu-ds
+spec: 
+  selector: 
+   matchLabels:
+      name: ubuntu
+  template:
+   metadata:
+     labels:
+       name: ubuntu
+   spec:      
+     containers:
+      - name: daemon-set
+        image: ubuntu 
+        command: ["/bin/bash", "-c"] 
+        args:
+        - sleep 1000000     
