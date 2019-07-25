@@ -1,0 +1,2 @@
+NAME    CPU(cores)   MEMORY(bytes)   
+myapp   22m          16Mi            
