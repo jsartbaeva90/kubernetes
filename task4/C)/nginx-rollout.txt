@@ -1,0 +1,5 @@
+kubectl rollout history deployment
+deployments "nginx-app"
+REVISION  CHANGE-CAUSE
+2         update 1.15.1
+3         update 1.14.0
