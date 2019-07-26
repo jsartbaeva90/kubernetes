@@ -1,0 +1,13 @@
+1) kubectl get sts 
+
+2) kubectl apply -f wordpress-sts.yaml 
+
+3) kubectl rollout history sts wordpress 
+
+4) kubectl rollout history sts wordpress --revision=2 
+
+5) kubectl rollout undo sts wordpress --to-revision=1 
+
+6) kubectl status sts wordpress 
+
+7) kubectl rollout status sts wordpress
